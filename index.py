@@ -6,10 +6,12 @@ count = 0
 while True:
     if not connectionCheck.isConneted():
         count += 1
-        if count == 100:
+        print(count)
+        if count == 5:
             print("sem internet")
             while True:
                 if connectionCheck.isConneted():
+                    print("com internet")
                     sendMail.send()
                     count = 0
                     break
